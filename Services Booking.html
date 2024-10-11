@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMWSP_Art Services Booking</title>
+    <link rel="stylesheet" href="Template.css">
+    <script defer src="server.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SMWSP_Art Services</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#fabric-painting">Fabric Painting</a></li>
+                <li><a href="#drawing">Drawing</a></li>
+                <li><a href="#tattoo">Tattoo</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h2>Book Your Art Experience Today!</h2>
+        <p>Explore our services and make a reservation</p>
+        <a href="#booking-form" class="btn">Book Now</a>
+    </section>
+    <section id="services">
+        <div id="fabric-painting" class="service">
+            <div class="slider">
+                <!-- <img src="C:\Users\boith\OneDrive\Documentos\Projects\SMWSP_Art\images\FabricPaintThree.jpg" alt="Fabric Painting 1" class="service-image">
+                <img src="C:\Users\boith\OneDrive\Documentos\Projects\SMWSP_Art\images\FabricPaintTwo.jpg" alt="Fabric Painting 2" class="service-image"> -->
+                <img src="C:\Users\boith\OneDrive\Documentos\Projects\SMWSP_Art\images\FabricPaint.jpg" alt="Fabric Painting 3" class="service-image">
+            </div>
+            <h3>Fabric Painting</h3>
+            <p>Unique fabric painting designs that bring your clothes to life.</p>
+        </div>
+        <div id="drawing" class="service">
+            <div class="slider">
+                <img src="C:\Users\boith\OneDrive\Documentos\Projects\SMWSP_Art\images\Screenshot_20240606_002044_com.android.gallery3d.jpg" alt="Drawing 1" class="service-image">
+                <!-- <img src="C:\Users\boith\OneDrive\Documentos\Projects\SMWSP_Art\images\8a342bf40604f123a4453a52a242b886.jpg" alt="Drawing 2" class="service-image">
+                <img src="C:\Users\boith\OneDrive\Documentos\Projects\SMWSP_Art\images\IMG_20231123_154809.jpg" alt="Drawing 3" class="service-image"> -->
+            </div>
+            <h3>Drawing</h3>
+            <p>Get personalized drawings, whether it's a portrait or something abstract.</p>
+        </div>
+        <div id="tattoo" class="service">
+            <div class="slider">
+                <!-- <img src="C:\Users\boith\OneDrive\Documentos\Projects\SMWSP_Art\images\TattooThree.webp" alt="Tattoo 1" class="service-image">
+                <img src="C:\Users\boith\OneDrive\Documentos\Projects\SMWSP_Art\images\TattooOne.webp" alt="Tattoo 2" class="service-image"> -->
+                <img src="C:\Users\boith\OneDrive\Documentos\Projects\SMWSP_Art\images\Tattoo.webp" alt="Tattoo 3" class="service-image">
+            </div>
+            <h3>Tattoo</h3>
+            <p>Express yourself with custom tattoos designed just for you.</p>
+        </div>
+        <section id="booking-form">
+            <h2>Book Your Service</h2>
+            <form id="bookingForm">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first_name" required>
+                
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last_name" required>
+        
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="service">Choose a Service:</label>
+                <select id="service" name="service" required>
+                    <option value="fabric-painting">Fabric Painting</option>
+                    <option value="drawing">Drawing</option>
+                    <option value="tattoo">Tattoo</option>
+                </select>
+        
+                <label for="date">Choose Date:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    <footer id="contact">
+        <p>&copy; 2024 Art Services | Contact us: <a href="boithlomolo@gmail.com">Boithlomolo@gmail.com</a> <a href="067 930 9258">067 930 9258</a></p>
+    </footer>
+    <!-- Script -->
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+    
+            const formData = {
+                first_name: document.getElementById('first-name').value,
+                last_name: document.getElementById('last-name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                service: document.getElementById('service').value,
+                date: document.getElementById('date').value,
+            };
+    
+            try {
+                const response = await fetch('http://your-server-domain.com/submit_booking', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+    
+                if (response.ok) {
+                    // Redirect to Thank You Page
+                    window.location.href = 'thank-you.html';
+                } else {
+                    alert('There was an error submitting your booking. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('There was an error submitting your booking. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>
