@@ -6,6 +6,7 @@
     <title>SMWSP_Art Services Booking</title>
     <link rel="stylesheet" href="Template.css">
     <script defer src="server.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -29,8 +30,6 @@
     <section id="services">
         <div id="fabric-painting" class="service">
             <div class="slider">
-                <!-- <img src="C:\Users\boith\OneDrive\Documentos\Projects\SMWSP_Art\images\FabricPaintThree.jpg" alt="Fabric Painting 1" class="service-image">
-                <img src="C:\Users\boith\OneDrive\Documentos\Projects\SMWSP_Art\images\FabricPaintTwo.jpg" alt="Fabric Painting 2" class="service-image"> -->
                 <img src="C:\Users\boith\OneDrive\Documentos\Projects\SMWSP_Art\images\FabricPaint.jpg" alt="Fabric Painting 3" class="service-image">
             </div>
             <h3>Fabric Painting</h3>
@@ -39,16 +38,12 @@
         <div id="drawing" class="service">
             <div class="slider">
                 <img src="C:\Users\boith\OneDrive\Documentos\Projects\SMWSP_Art\images\Screenshot_20240606_002044_com.android.gallery3d.jpg" alt="Drawing 1" class="service-image">
-                <!-- <img src="C:\Users\boith\OneDrive\Documentos\Projects\SMWSP_Art\images\8a342bf40604f123a4453a52a242b886.jpg" alt="Drawing 2" class="service-image">
-                <img src="C:\Users\boith\OneDrive\Documentos\Projects\SMWSP_Art\images\IMG_20231123_154809.jpg" alt="Drawing 3" class="service-image"> -->
             </div>
             <h3>Drawing</h3>
             <p>Get personalized drawings, whether it's a portrait or something abstract.</p>
         </div>
         <div id="tattoo" class="service">
             <div class="slider">
-                <!-- <img src="C:\Users\boith\OneDrive\Documentos\Projects\SMWSP_Art\images\TattooThree.webp" alt="Tattoo 1" class="service-image">
-                <img src="C:\Users\boith\OneDrive\Documentos\Projects\SMWSP_Art\images\TattooOne.webp" alt="Tattoo 2" class="service-image"> -->
                 <img src="C:\Users\boith\OneDrive\Documentos\Projects\SMWSP_Art\images\Tattoo.webp" alt="Tattoo 3" class="service-image">
             </div>
             <h3>Tattoo</h3>
@@ -82,9 +77,23 @@
                 <button type="submit">Submit</button>
             </form>
         </section>
-    <footer id="contact">
-        <p>&copy; 2024 Art Services | Contact us: <a href="boithlomolo@gmail.com">Boithlomolo@gmail.com</a> <a href="067 930 9258">067 930 9258</a></p>
-    </footer>
+        <footer id="contact">
+            <p>&copy; 2024 SMWSP Art Services | Contact us: 
+                <a href="mailto:boithlomolo@gmail.com">Boithlomolo@gmail.com</a> 
+                <a href="tel:0679309258">067 930 9258</a>
+            </p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </footer>
     <!-- Script -->
     <script>
         document.getElementById('bookingForm').addEventListener('submit', async function(e) {
